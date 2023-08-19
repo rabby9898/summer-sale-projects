@@ -28,6 +28,9 @@ function totalPriceCalculate(priceId, price) {
   if (totalPrice > 200) {
     purchaseBtn.removeAttribute("disabled");
   }
+
+  const totalELement = document.getElementById("total");
+  totalELement.innerText = totalPrice;
 }
 
 // apply button confirmation
@@ -59,6 +62,7 @@ document.getElementById("apply-btn").addEventListener("click", function () {
   total.innerText = finalDiscount;
 });
 
+// product button 1-6
 function productBtn() {
   const name = productNameElement("product-name");
   const price = productPriceElement("product-price");
@@ -103,4 +107,10 @@ function productBtn6() {
 
   showProductName("name-area", name);
   totalPriceCalculate("total-price", price);
+}
+
+// go home
+
+function goHomeElement() {
+  window.location.href = "index.html";
 }
