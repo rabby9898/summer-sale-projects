@@ -60,8 +60,8 @@
         <div class="">
           <div class="px-4 py-5 lg:pl-44 lg:py-16">
             <h3 class="text-4xl font-semibold my-7">Kitchenware</h3>
-            <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:flex lg:flex-row lg:justify-between gap-6 lg:gap-8">
-              <div class="card w-full lg:w-96 bg-base-100 shadow-xl rounded-lg">
+            <div class="w-full grid grid-cols-1 lg:flex lg:flex-row lg:justify-between gap-6 lg:gap-8">
+              <div onclick="productBtn()" class="card w-full lg:w-96 bg-base-100 shadow-xl rounded-lg">
                 <figure class="bg-[#F3F3F3] m-6 px-10 py-9 rounded-none">
                   <img src="./images/prod1.png" alt="Shoes" class="" />
                 </figure>
@@ -94,12 +94,12 @@
                       class="mask mask-star-2 bg-[#FFC107]"
                     />
                   </div>
-                  <h2 class="card-title my-4">K. Accessories</h2>
-                  <p class="text-[#838383]"><span>00</span> TK</p>
+                  <h2 id="product-name" class="card-title my-4">K. Accessories</h2>
+                  <p class="text-[#838383]"><span id="product-price">39.00</span> TK</p>
                 </div>
               </div>
 
-              <div
+              <div onclick="productBtn2()"
                 class="card w-full lg:w-96 bg-base-100 shadow-xl rounded-lg justify-between"
               >
                 <figure class="bg-[#F3F3F3] m-6 px-10 py-9 rounded-none">
@@ -134,12 +134,12 @@
                       class="mask mask-star-2 bg-[#FFC107]"
                     />
                   </div>
-                  <h2 class="card-title my-4">K. Accessories</h2>
-                  <p class="text-[#838383]"><span>00</span> TK</p>
+                  <h2 id="product-name-2" class="card-title my-4">K. Accessories</h2>
+                  <p id="product-price-2" class="text-[#838383]"><span>25.00</span> TK</p>
                 </div>
               </div>
 
-              <div
+              <div onclick="productBtn3()"
                 class="card w-full lg:w-96 bg-base-100 shadow-xl rounded-lg justify-between"
               >
                 <figure class="bg-[#F3F3F3] m-6 px-10 py-9 rounded-none">
@@ -174,8 +174,8 @@
                       class="mask mask-star-2 bg-[#FFC107]"
                     />
                   </div>
-                  <h2 class="card-title my-4">K. Accessories</h2>
-                  <p class="text-[#838383]"><span>00</span> TK</p>
+                  <h2 id="product-name-3" class="card-title my-4">Home Cooker</h2>
+                  <p id="product-price-3" class="text-[#838383]"><span>49.00</span> TK</p>
                 </div>
               </div>
             </div>
@@ -183,9 +183,9 @@
 
           <!-- card category -2 -->
           <div class="px-4 py-5 lg:pl-44 lg:py-16">
-            <h3 class="text-4xl font-semibold my-7">Kitchenware</h3>
+            <h3 class="text-4xl font-semibold my-7">Sportswear</h3>
             <div class="flex flex-col lg:flex-row lg:justify-between gap-6 lg:gap-8">
-              <div class="card w-full lg:w-96 bg-base-100 shadow-xl rounded-lg">
+              <div onclick="productBtn4()" class="card w-full lg:w-96 bg-base-100 shadow-xl rounded-lg">
                 <figure class="bg-[#F3F3F3] m-6 px-10 py-9 rounded-none">
                   <img src="./images/prod4.png" alt="Shoes" class="" />
                 </figure>
@@ -218,12 +218,13 @@
                       class="mask mask-star-2 bg-[#FFC107]"
                     />
                   </div>
-                  <h2 class="card-title my-4">K. Accessories</h2>
-                  <p class="text-[#838383]"><span>00</span> TK</p>
+                  <h2 id="product-name-4" class="card-title my-4">Sports Back Cap</h2>
+                  <p id="product-price-4" class="text-[#838383]"><span>49.00</span> TK</p>
                 </div>
               </div>
 
               <div
+                onclick = "productBtn5()"
                 class="card w-full lg:w-96 bg-base-100 shadow-xl rounded-lg justify-between"
               >
                 <figure class="bg-[#F3F3F3] m-6 px-10 py-9 rounded-none">
@@ -258,12 +259,12 @@
                       class="mask mask-star-2 bg-[#FFC107]"
                     />
                   </div>
-                  <h2 class="card-title my-4">K. Accessories</h2>
-                  <p class="text-[#838383]"><span>00</span> TK</p>
+                  <h2 id="product-name-5" class="card-title my-4">Full Jersey Set</h2>
+                  <p id="product-price-5" class="text-[#838383]"><span>69.00</span> TK</p>
                 </div>
               </div>
 
-              <div
+              <div onclick=" productBtn6()"
                 class="card w-full lg:w-96 bg-base-100 shadow-xl rounded-lg justify-between"
               >
                 <figure class="bg-[#F3F3F3] m-6 px-10 py-9 rounded-none">
@@ -298,25 +299,30 @@
                       class="mask mask-star-2 bg-[#FFC107]"
                     />
                   </div>
-                  <h2 class="card-title my-4">K. Accessories</h2>
-                  <p class="text-[#838383]"><span>00</span> TK</p>
+                  <h2 id="product-name-6" class="card-title my-4">Sports cates</h2>
+                  <p id="product-price-6" class="text-[#838383]"><span>169.00</span> TK</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <!-- payment area -->
-        <div class="w-full mr-24 mt-40">
+        <div class="w-full mr-24 md:px-4 md:mt-[118px] lg:mt-40">
           <div class="bg-white h-max px-7 py-6 rounded-lg w-full">
             <h5 class="text-lg md:text-xl lg:text-3xl">Have Coupon?</h5>
             <div class="join my-3">
               <input
+              id="input-coupon"
                 class="input input-bordered join-item w-full"
                 type="text"
                 placeholder="COUPON"
+                
+                
               />
               <button
+              id="apply-btn"
                 class="btn join-item bg-[#E527B2] text-white text-sm lg:text-base px-7"
+                disabled
               >
                 Apply
               </button>
@@ -325,27 +331,30 @@
 
           <!-- product name area -->
           <div class="w-full bg-white mt-5 px-7 py-6 rounded-lg">
-            <div class=""></div>
+            <div id="name-area" class="mb-10"></div>
             <!-- product calculate area -->
             <div class="bg-white">
               <h5 class="text-xl text-black font-medium my-3">
-                Total Price: <span class="text-[#838383]">00</span>
+                Total Price: <span id="total-price" class="text-[#838383]">00</span>
                 <span class="text-[#838383]">TK</span>
               </h5>
               <h5 class="text-xl text-black font-medium my-3">
-                Discount: <span class="text-[#838383]">00</span>
+                Discount: <span id="discount" class="text-[#838383]">00</span>
                 <span class="text-[#838383]">TK</span>
               </h5>
               <h5 class="text-xl text-black font-medium my-3">
-                Total: <span class="text-[#838383]">00</span>
+                Total: <span id="total" class="text-[#838383]">00</span>
                 <span class="text-[#838383]">TK</span>
               </h5>
             </div>
 
             <!-- You can open the modal using ID.showModal() method -->
-            <button
-              class=" w-full bg-[#E527B2] text-white text-lg py-3 rounded-lg mt-10"
+            <button 
+            id="purchase-btn"
+              type="button"
+              class="w-full bg-[#E527B2] text-white text-lg py-3 rounded-lg mt-10 disabled:opacity-50"
               onclick="my_modal_2.showModal()"
+              disabled
             >
               Make Purchase
             </button>
@@ -353,14 +362,14 @@
               <form method="dialog" class="modal-box">
 
                 <div class="card w-full">
-                  <figure class="px-10 pt-10">
+                  <figure class="px-10 pt-4">
                     <img src="./images/congo.png" alt="congo" class="" />
                   </figure>
                   <div class="card-body items-center text-center">
-                    <h2 class="card-title text-5xl text-black">Congratulations!</h2>
+                    <h2 class="card-title text-3xl text-black">Congratulations!</h2>
                     <p class="text-xl text-[#838383] font-normal">Your Purchase the product</p>
                     <div class="card-actions">
-                      <button class="btn btn-primary bg-[#E527B2] text-white text-md px-9 py-4 rounded-lg mt-8 border-none">Go Home</button>
+                      <button class="btn btn-primary bg-[#E527B2] text-white text-sm px-7 py-4 rounded-lg mt-8 border-none">Go Home</button>
                     </div>
                   </div>
                 </div>
