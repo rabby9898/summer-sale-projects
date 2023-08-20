@@ -12,8 +12,10 @@ function productPriceElement(inputId) {
 
 function showProductName(areaId, name) {
   const areaElement = document.getElementById(areaId);
+  const count = areaElement.childElementCount;
+
   const p = document.createElement("p");
-  p.innerText = name;
+  p.innerText = `${count + 1}. ${name}`;
 
   areaElement.appendChild(p);
 }
@@ -24,28 +26,34 @@ function totalPriceCalculate(priceId, price) {
   const totalPrice = total.toFixed(2);
   totalPriceElement.innerText = totalPrice;
 
+  // apply button
   const purchaseBtn = document.getElementById("purchase-btn");
-  if (totalPrice > 200) {
+  if (totalPrice > 0) {
     purchaseBtn.removeAttribute("disabled");
   }
 
   const totalELement = document.getElementById("total");
   totalELement.innerText = totalPrice;
+
+  const applyBtnElement = document.getElementById("apply-btn");
+
+  if (totalPrice > 200) {
+    applyBtnElement.removeAttribute("disabled");
+  } else {
+    applyBtnElement.setAttribute("disabled", true);
+  }
 }
 
 // apply button confirmation
-document
-  .getElementById("input-coupon")
-  .addEventListener("keyup", function (event) {
-    const elementValue = event.target.value;
-    console.log(elementValue);
-    const applyBtnElement = document.getElementById("apply-btn");
-    if (elementValue === "SELL20") {
-      applyBtnElement.removeAttribute("disabled");
-    } else {
-      applyBtnElement.setAttribute("disabled", true);
-    }
-  });
+// document
+//   .getElementById("input-coupon")
+//   .addEventListener("keyup", function (event) {
+//     const elementValue = event.target.value;
+//     console.log(elementValue);
+//     const applyBtnElement = document.getElementById("apply-btn");
+//     if (elementValue === "SELL20") {
+
+//   });
 
 document.getElementById("apply-btn").addEventListener("click", function () {
   const totalPrice = productPriceElement("total-price");
