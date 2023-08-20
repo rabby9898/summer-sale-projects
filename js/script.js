@@ -56,18 +56,24 @@ function totalPriceCalculate(priceId, price) {
 //   });
 
 document.getElementById("apply-btn").addEventListener("click", function () {
-  const totalPrice = productPriceElement("total-price");
+  const inputElement = document.getElementById("input-coupon");
+  const inputValue = inputElement.value;
+  if (inputValue === "SELL20") {
+    const totalPrice = productPriceElement("total-price");
 
-  const discountPrice = totalPrice - totalPrice * 0.2;
-  const finalDiscount = discountPrice.toFixed(2);
+    const discountPrice = totalPrice - totalPrice * 0.2;
+    const finalDiscount = discountPrice.toFixed(2);
 
-  const discountAmountElement = document.getElementById("discount");
-  const discountAmount = totalPrice - finalDiscount;
-  const discountAmountFixed = discountAmount.toFixed(2);
-  discountAmountElement.innerText = discountAmountFixed;
+    const discountAmountElement = document.getElementById("discount");
+    const discountAmount = totalPrice - finalDiscount;
+    const discountAmountFixed = discountAmount.toFixed(2);
+    discountAmountElement.innerText = discountAmountFixed;
 
-  const total = document.getElementById("total");
-  total.innerText = finalDiscount;
+    const total = document.getElementById("total");
+    total.innerText = finalDiscount;
+  } else {
+    alert("Invalid Coupon Code!");
+  }
 });
 
 // product button 1-6
