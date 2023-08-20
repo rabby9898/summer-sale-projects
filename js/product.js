@@ -1,7 +1,7 @@
 document.getElementById("apply-btn").addEventListener("click", function () {
   const inputElement = document.getElementById("input-coupon");
   const inputValue = inputElement.value;
-  if (inputValue === "SELL20") {
+  if (inputValue === "SELL200") {
     const totalPrice = productPriceElement("total-price");
 
     const discountPrice = totalPrice - totalPrice * 0.2;
